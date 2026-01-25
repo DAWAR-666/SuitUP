@@ -1,9 +1,10 @@
+import Body from "./components/Body";
 
 
 const App = () => {
   return (
-    <div>App
-      <img src='logo.jpg' alt="logo" className='border-1 p-0' />
+    <div>
+      <Body />
     </div>
   )
 }
