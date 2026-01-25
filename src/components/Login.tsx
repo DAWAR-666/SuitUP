@@ -1,8 +1,14 @@
 import { useRef, useState } from "react";
 import Header from "./Header"
 import validate from "../utils/validate";
+import {auth} from "../utils/const";
+import {createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile } from "firebase/auth";
+import { useDispatch } from "react-redux";
+import { addUser } from "../utils/userSlice";
+
 
 const Login = () => {
+  const dispatch=useDispatch();
   const [isSignedIn,setSignedIn]=useState(true);
   const [errorMsg,setErrorMsg]=useState<string>("");
   const toggleSignIn=()=>{
@@ -20,6 +26,41 @@ const Login = () => {
     const validation=validate(email,pwd);
     setErrorMsg(validation)
     if (validation !=="") return;
+    if(!isSignedIn){
+            createUserWithEmailAndPassword(auth, email, pwd)
+                .then((userCredential) => {
+                    // Signed up 
+                    const user = userCredential.user;
+                    updateProfile(user, {
+                        displayName: fullName
+                        }).then(() => {
+                        // Profile updated!
+                        // ...
+                        if(auth.currentUser){
+                            const { uid , email ,displayName} = auth.currentUser;
+                            dispatch(addUser({uid:uid,email:email,displayName:displayName}));   
+                        }})
+                    
+                })
+                .catch((error) => {
+                    const errorCode = error.code;
+                    const errorMessage = error.message;
+                    setErrorMsg(errorCode + " "+ errorMessage);
+            });
+        }
+    else{
+            signInWithEmailAndPassword(auth, email, pwd)
+                .then((_userCredential) => {
+                    // Signed in 
+                    //const user = userCredential.user;
+                })
+                .catch((error) => {
+                    const errorCode = error.code;
+                    const errorMessage = error.message;
+                    setErrorMsg(errorCode + " "+ errorMessage);
+                });
+
+        }
   }
   return (
     <div>
