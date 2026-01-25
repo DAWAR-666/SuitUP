@@ -20,7 +20,7 @@ const Login = () => {
         }
         <input type="email" placeholder="Email" className="border w-full my-2 p-2 text-2xl rounded-lg" />
         <input type="password" placeholder="Password" className="border w-full my-2 p-2 text-2xl rounded-lg" />
-        <p className="text-red-400 my-4 text-lg">errorMsg</p>
+        <p className="text-red-400 text-lg">errorMsg</p>
         <button className="border w-full my-2 rounded-lg p-2 text-xl bg-black hover:bg-black/40 cursor-pointer">
         {isSignedIn? 'Sign In':'Sign Up'}</button>
         <p className="cursor-pointer my-2" onClick={toggleSignIn}>
