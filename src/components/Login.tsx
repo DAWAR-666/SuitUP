@@ -1,7 +1,7 @@
 import { useRef, useState } from "react";
 import Header from "./Header"
 import validate from "../utils/validate";
-import {auth} from "../utils/const";
+import {auth} from "../utils/firebase";
 import {createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { useDispatch } from "react-redux";
 import { addUser } from "../utils/userSlice";
