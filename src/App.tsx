@@ -2,7 +2,9 @@
 
 const App = () => {
   return (
-    <div>App</div>
+    <div>App
+      <img src='logo.jpg' alt="logo" className='border-1 p-0' />
+    </div>
   )
 }
 
