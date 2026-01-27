@@ -41,7 +41,9 @@ const Header = () => {
         </div>
         <div>
           {user && 
-          (<button onClick={handleSignOut}>Sign out</button>)}
+          (<button 
+          className="border m-10 px-3 py-2 rounded-lg text-xl bg-black text-white hover:bg-black/80 cursor-pointer"
+          onClick={handleSignOut}>Sign out</button>)}
         </div>        
     </div>
   )
