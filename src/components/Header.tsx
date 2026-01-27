@@ -34,15 +34,15 @@ const Header = () => {
             return ()=>unsubscribe();
     },[])
   return (
-    <div className="absolute flex items-center w-full justify-between z-10 border-b-8">
+    <div className="absolute flex items-center w-full justify-between z-10 border-b-6">
         <div className="flex items-center">
             <img src="logo.jpg" alt="logo" className="w-1/4 m-6" />
-            <h1 className="text-5xl font-bold">Suit UP</h1>
+            <h1 className="text-3xl font-bold">Suit UP</h1>
         </div>
         <div>
           {user && 
           (<button 
-          className="border m-10 px-3 py-2 rounded-lg text-xl bg-black text-white hover:bg-black/80 cursor-pointer"
+          className="border m-7 px-2 py-1 rounded-lg text-lg bg-black text-white hover:bg-black/80 cursor-pointer"
           onClick={handleSignOut}>Sign out</button>)}
         </div>        
     </div>

@@ -3,10 +3,10 @@ import Header from "./Header"
 
 const Browser = () => {
   return (
-    <div>
+    <div className="bg-[url(bgLogo.png)] bg-repeat w-screen h-screen">
       <Header/>
-      <div className="absolute -z-10">
-          <img src="bgLogo.png" alt="bglogo" className="w-screen h-screen"/>
+      <div>
+          
       </div>
     </div>
   )
