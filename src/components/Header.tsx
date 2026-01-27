@@ -34,7 +34,7 @@ const Header = () => {
             return ()=>unsubscribe();
     },[])
   return (
-    <div className="absolute flex items-center w-full justify-between z-10 border-b-6">
+    <div className="animate-slide-down absolute flex items-center w-full justify-between z-10 border-b-6">
         <div className="flex items-center">
             <img src="logo.jpg" alt="logo" className="w-1/6 m-3" />
             <h1 className="text-5xl font-bold">Suit UP</h1>

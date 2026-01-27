@@ -1,7 +1,7 @@
 const MenuOptions= () => {
   return (
     <div
-    className="absolute w-55/100 bg-black/70 h-72/100 rounded-r-4xl grid grid-cols-1 grid-rows-1"
+    className="animate-slide-left absolute w-55/100 bg-black/70 h-72/100 rounded-r-4xl grid grid-cols-1 grid-rows-1"
     >
         <div className="m-5 ml-0 border-white border-4 border-l-0 rounded-r-4xl col-span-full row-span-full grid grid-cols-12 grid-rows-12">
           <h1 className="text-center text-3xl font-bold p-1 mb-1 row-span-1 col-start-4 col-end-10 bg-white rounded-b-xl">Craft Your Cool</h1>

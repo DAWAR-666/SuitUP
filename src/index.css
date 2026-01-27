@@ -1,1 +1,26 @@
 @import "tailwindcss";
+@theme {
+  /* Define the keyframes */
+  @keyframes slide-left {
+    from { transform: translateX(-100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+  }
+  @keyframes slide-right {
+    from { transform: translateX(100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+  }
+  @keyframes slide-down {
+    from { transform: translateY(-100%); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+
+
+  /* Create the utility names */
+  --animate-slide-left: slide-left 0.8s ease-out;
+  --animate-slide-right: slide-right 0.8s ease-out;
+  --animate-slide-down: slide-down 0.8s ease-out;
+}
+html, body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
