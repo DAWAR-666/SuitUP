@@ -19,5 +19,6 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
+//@ts-expect-error
 const analytics = getAnalytics(app);
 export const auth = getAuth();

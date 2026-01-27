@@ -1,8 +1,8 @@
-import React from 'react'
 
 const ImgBox = () => {
   return (
-    <div>ImgBox</div>
+    <div 
+    className="absolute right-0 mt-40 w-4/10 bg-black h-72/100 text-white">IMG</div>
   )
 }
 

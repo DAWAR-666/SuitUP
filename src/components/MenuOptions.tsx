@@ -1,8 +1,10 @@
-import React from 'react'
-
-const MenuOptions = () => {
+const MenuOptions= () => {
   return (
-    <div>MenuOptions</div>
+    <div
+    className="absolute mt-40 w-55/100 bg-black h-72/100 text-white"
+    >
+        MenuOPT
+    </div>
   )
 }
 
