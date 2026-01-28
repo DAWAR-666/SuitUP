@@ -1,4 +1,8 @@
 const MenuOptions= () => {
+  const dimensions:string[]=["height","neck","shoulders","chest","stomach","sleeve","bicep","waist","inseam","outseam","thigh","knee"]
+  const min:number[]=[50,25,25,60,50,45,15,50,50,70,30,20]
+  const max:number[]=[300,60,70,170,180,90,70,170,110,150,90,60]
+  
   return (
     <div
     className="animate-slide-left absolute w-55/100 bg-black/70 h-72/100 rounded-r-4xl grid grid-cols-1 grid-rows-1"
@@ -17,6 +21,27 @@ const MenuOptions= () => {
                   min={50} 
                   max={300} 
                   className="bg-gray-400 w-1/4 border-2 m-2 border-white rounded-full text-center text-xl p-2"/>
+                <label>
+                  height 
+                </label>
+                <input 
+                  type="number" 
+                  placeholder="chest(cm)" 
+                  min={50} 
+                  max={300} 
+                  className="bg-gray-400 w-1/4 border-2 border-white m-2 rounded-full text-center text-xl p-2"/>
+                <label>
+                  height 
+                </label>
+                <input 
+                  type="number" 
+                  placeholder="chest(cm)" 
+                  min={50} 
+                  max={300} 
+                  className="bg-gray-400 w-1/4 border-2 border-white m-2 rounded-full text-center text-xl p-2"/>
+               <label>
+                  height 
+                </label>
                 <input 
                   type="number" 
                   placeholder="chest(cm)" 
