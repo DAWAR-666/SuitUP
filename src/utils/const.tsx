@@ -23,3 +23,5 @@ export const DIMENSION_LIMITS: Record<SuitDimension, Range> = {
   thigh:     { min: 30,  max: 90,  label: "Thigh Circumference" },
   knee:      { min: 20,  max: 60,  label: "Knee Circumference" }
 };
+
+export const dimensions: SuitDimension[] = Object.keys(DIMENSION_LIMITS) as SuitDimension[];
