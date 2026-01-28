@@ -4,7 +4,7 @@ const Dimensions = () => {
     <>
               <h1 className="pl-3 py-1 text-2xl row-span-1 col-start-1 col-end-5 bg-white rounded-r-4xl">What's Your Fit?</h1>
               
-                <div className="m-5 row-start-3 row-end-11 col-span-full overflow-y-auto pr-2 custom-scrollbar">
+                <div className="m-5 row-start-3 row-end-11 col-span-full overflow-y-auto pr-2 ">
               <div className="grid grid-cols-2 gap-4">
                 {dimensions.map((dim) => (
                   <div key={dim} className="flex flex-col">
