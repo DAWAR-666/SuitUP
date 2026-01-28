@@ -1,4 +1,4 @@
-import { DIMENSION_LIMITS, dimensions } from "../utils/const"
+
 
 const SuitTypes = () => {
   return (
@@ -7,20 +7,35 @@ const SuitTypes = () => {
                   
                     <div className="m-5 row-start-3 row-end-11 col-span-full overflow-y-auto pr-2 custom-scrollbar">
                   <div className="grid grid-cols-2 gap-4">
-                    {dimensions.map((dim) => (
-                      <div key={dim} className="flex flex-col">
-                        <label className="text-white capitalize ml-2 mb-1 text-sm">
-                          {DIMENSION_LIMITS[dim].label}
+                    
+                        <label className="text-white text-center text-3xl capitalize ml-2 mb-1 ">
+                          BLACK TUXEDO
                         </label>
-                        <input
-                          type="number"
-                          placeholder={`${dim} (cm)`}
-                          min={DIMENSION_LIMITS[dim].min}
-                          max={DIMENSION_LIMITS[dim].max}
-                          className="bg-gray-400 w-full border-2 border-white rounded-full text-center text-xl p-2 placeholder:text-gray-600 focus:outline-none focus:bg-white transition-colors"
+                        <button
+                          className="bg-linear-to-r from-black to-white w-full border-2 border-white rounded-full  p-5 focus:shadow-white focus:shadow-2xl focus:scale-[1.04] transition"
                         />
-                      </div>
-                    ))}
+                      
+                      
+                      
+                      <label className="text-white text-center text-3xl capitalize ml-2 mb-1 ">
+                          RED VELVET
+                        </label>
+                        <button
+                          className="bg-linear-to-r from-red-500 to-black w-full border-2 border-white rounded-full  p-5 focus:shadow-white focus:shadow-2xl focus:scale-[1.04] transition"
+                        />
+                        <label className="text-white text-center text-3xl capitalize ml-2 mb-1 ">
+                          OFFICE BLUE
+                        </label>
+                        <button
+                          className="bg-linear-to-r from-blue-950 to-white via-blue-950 w-full border-2 border-white rounded-full  p-5 focus:shadow-white focus:shadow-2xl focus:scale-[1.04] transition"
+                        />
+                        <label className="text-white text-center text-3xl capitalize ml-2 mb-1 ">
+                          CASUAL TAN
+                        </label>
+                        <button
+                          className="bg-linear-to-r from-amber-100 to-white via-amber-100 w-full border-2 border-white rounded-full  p-5 focus:shadow-white focus:shadow-2xl focus:scale-[1.04] transition"
+                        />
+                    
                   </div>
                 </div>
                   </>
